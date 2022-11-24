@@ -1,3 +1,25 @@
-body {
-    color: #f76c6c;
+/* google font (titles + content) */
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* homepage */
+@import "general/homepage-style.css";
+
+/* general CSS */
+:root {
+    --titleFont: 'Limelight', cursive;
+    --mainFont: 'Roboto', sans-serif;
+    /* breakpoint tablet = min-width : 481 */
+    /* breakpoint desktop = min-width : 769 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--mainFont);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--titleFont);
 }

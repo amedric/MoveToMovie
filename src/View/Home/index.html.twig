@@ -1,6 +1,28 @@
 {% extends 'layout.html.twig' %}
 
+{% block title %}Move to movie | Homepage{% endblock %}
+
 {% block content %}
-    <h1>Hello Wilder !</h1>
-    <p>Find a complete CRUD example on <a href="/items">/items</a> page.</p>
+    <div class="homepage-container">
+
+        {# full screen opening #}
+        <div class="random-carousel">
+            <div class="sitename">
+            <h1>MOVE TO MOVIE</h1>
+                <p>Stop watching, start travelling</p>
+            </div>
+                <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+        </div>
+
+        {# movie cards #}
+        <div class="homepage-movie-cards">
+            {% for movie in movies %}
+                <div class="movie-card">
+                    <img src="{{ movie[1] }}" alt="{{ movie[0] }} cover">
+                    <p class="movie-title">{{ movie[0] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
 {% endblock %}
