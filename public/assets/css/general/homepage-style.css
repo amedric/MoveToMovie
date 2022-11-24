@@ -1,0 +1,10 @@
+.homepage-container {
+    width: 100%;
+}
+
+.random-carousel {
+    width: 100%;
+    background-image: url("../../images/Dubrovnik-Croatia.jpg");
+    background-position: center;
+    background-size: cover;
+}
