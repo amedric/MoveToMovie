@@ -16,10 +16,11 @@
 
         {# movie cards #}
         <div class="homepage-movie-cards">
+            <p>Choose your next adventure!</p>
             {% for movie in movies %}
                 <div class="movie-card">
                     <img src="{{ movie[1] }}" alt="{{ movie[0] }} cover">
-                    <p class="movie-title">{{ movie[0] }}</p>
+                    <h2 class="movie-title">{{ movie[0] }}</h2>
                 </div>
             {% endfor %}
         </div>
