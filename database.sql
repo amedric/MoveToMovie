@@ -8,22 +8,22 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema hackaton1
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `mydb` ;
+DROP SCHEMA IF EXISTS `hackaton1` ;
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema hackaton1
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `hackaton1` DEFAULT CHARACTER SET utf8 ;
+USE `hackaton1` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`movie`
+-- Table `hackaton1`.`movie`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`movie` ;
+DROP TABLE IF EXISTS `hackaton1`.`movie` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`movie` (
+CREATE TABLE IF NOT EXISTS `hackaton1`.`movie` (
                                               `id` INT NOT NULL AUTO_INCREMENT,
                                               `name` VARCHAR(255) NULL,
                                               `img` TEXT NULL,
@@ -32,11 +32,11 @@ CREATE TABLE IF NOT EXISTS `mydb`.`movie` (
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`location`
+-- Table `hackaton1`.`location`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`location` ;
+DROP TABLE IF EXISTS `hackaton1`.`location` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`location` (
+CREATE TABLE IF NOT EXISTS `hackaton1`.`location` (
                                                  `id` INT NOT NULL AUTO_INCREMENT,
                                                  `country` VARCHAR(45) NULL,
                                                  `city` VARCHAR(45) NULL,
@@ -46,18 +46,18 @@ CREATE TABLE IF NOT EXISTS `mydb`.`location` (
                                                  INDEX `fk_location_movie_idx` (`movie_id` ASC) VISIBLE,
                                                  CONSTRAINT `fk_location_movie`
                                                      FOREIGN KEY (`movie_id`)
-                                                         REFERENCES `mydb`.`movie` (`id`)
+                                                         REFERENCES `hackaton1`.`movie` (`id`)
                                                          ON DELETE NO ACTION
                                                          ON UPDATE NO ACTION)
     ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`package`
+-- Table `hackaton1`.`package`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`package` ;
+DROP TABLE IF EXISTS `hackaton1`.`package` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`package` (
+CREATE TABLE IF NOT EXISTS `hackaton1`.`package` (
                                                 `id` INT NOT NULL AUTO_INCREMENT,
                                                 `hotel_name` VARCHAR(255) NULL,
                                                 `inclusive` TINYINT NULL,
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`package` (
                                                 INDEX `fk_package_location1_idx` (`location_id` ASC) VISIBLE,
                                                 CONSTRAINT `fk_package_location1`
                                                     FOREIGN KEY (`location_id`)
-                                                        REFERENCES `mydb`.`location` (`id`)
+                                                        REFERENCES `hackaton1`.`location` (`id`)
                                                         ON DELETE NO ACTION
                                                         ON UPDATE NO ACTION)
     ENGINE = InnoDB;
