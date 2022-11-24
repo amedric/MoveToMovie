@@ -40,6 +40,7 @@ CREATE TABLE IF NOT EXISTS `hackaton1`.`location` (
                                                  `id` INT NOT NULL AUTO_INCREMENT,
                                                  `country` VARCHAR(45) NULL,
                                                  `city` VARCHAR(45) NULL,
+                                                 'fictive_city' VARCHAR(45) NULL,
                                                  `img` TEXT NULL,
                                                  `movie_id` INT NOT NULL,
                                                  PRIMARY KEY (`id`),
