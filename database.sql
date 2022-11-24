@@ -64,9 +64,26 @@ create table package
     price       int          null,
     activities  varchar(255) null,
     location_id int          null,
+    picture1    varchar(255) null,
+    picture2    varchar(255) null,
+    picture3    varchar(255) null,
+
     constraint fk_package_location1
         foreign key (location_id) references location (id)
 );
+
+INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`, `picture3`) VALUES ('Beach resort', '1', '9', '/assets/accomodation/beach1', '/assets/accomodation/beach2', '/assets/accomodation/beach3');
+INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`) VALUES ('Hobbit house', '1', '1', '/assets/accomodation/hobbit', '/assets/accomodation/hobbit2');
+INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`) VALUES ('Bubble house', '1', '4', '/assets/accomodation/islande1', '/assets/accomodation/islande2');
+INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`) VALUES ('Petra resort', '1', '11', '/assets/accomodation/jordanie', '/assets/accomodation/jordanie2');
+INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`) VALUES ('Plitvice', '1', '7', '/assets/accomodation/plitvice', '/assets/accomodation/plitvice2');
+INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`, `picture3`) VALUES ('Sixx hotell', '1', '8', '/assets/accomodation/zhanggjiajie', '/assets/accomodation/chine1', '/assets/accomodation/chine2');
+INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`) VALUES ('SKYCITY Grand Hôtel', '1', '2', '/assets/accomodation/nouvelle-zelande');
+INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`) VALUES ('Dubrovnik villa', '1', '3', '/assets/accomodation/dubrivnik1', '/assets/accomodation/dubrovnik2');
+INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`) VALUES ('Sangho Privilege', '1', '5', '/assets/accomodation/tataouine1', '/assets/accomodation/tataouine2');
+INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`) VALUES ('Volcano Villa', '1', '6', '/assets/accomodation/etna1', '/assets/accomodation/etna2');
+INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`) VALUES ('Iguaza luxury', '1', '12', '/assets/accomodation/iguaza2');
+
 
 create index fk_package_location1_idx
     on package (location_id);
