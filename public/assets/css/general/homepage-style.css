@@ -2,9 +2,56 @@
     width: 100%;
 }
 
+/* fullscreen welcome page */
+
 .random-carousel {
-    width: 100%;
+    height: 100vh;
+    padding: 0.5em;
     background-image: url("../../images/Dubrovnik-Croatia.jpg");
     background-position: center;
     background-size: cover;
+}
+
+.site-name, .random-carousel p {
+    color: white;
+}
+
+.site-name {
+    text-align: center;
+}
+
+.catchphrase {
+    margin-top: 4em;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+}
+
+/* movie cards */
+
+.homepage-movie-cards {
+    padding: 0.5em;
+}
+
+.homepage-movie-cards img {
+    display: block;
+    width: 80vw;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.movie-card {
+    width: fit-content;
+    margin: 1em auto;
+    padding: 0.5em;
+    border-radius: 20px;
+    box-shadow: 0 0 2px;
+}
+
+.movie-title {
+    text-align: center;
+    padding: 0.5em;
+    color: red;
+    font-size: 2em;
+    font-weight: bold;
 }
