@@ -1,0 +1,69 @@
+label,input {
+    display:flex;
+    flex-direction:column;
+    margin: auto;
+}
+
+label, input[type="text"], input[type="email"], input[type="submit"] {
+    border-radius: 10em;
+}
+
+label {
+    text-align: center;
+}
+
+p {
+
+    text-align: center;
+    padding: 1vh 1em;
+    text-decoration: none;
+    color: black;
+    margin: 1em 0;
+    border-radius: 40px;
+    background : linear-gradient(90deg, #0162c8, #55e7fc);
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    opacity : 0.8;
+}
+.button {
+    padding-right : 45vh;
+    padding-left: 45vh;
+}
+
+.form {
+    border: 1px black solid;
+    border-radius: 2em;
+    margin-right : 50vh;
+    margin-left : 50vh;
+
+}
+
+
+@media screen and (max-width: 650px) {
+    p {
+
+        text-align: center;
+        padding: 1vh 1em;
+        text-decoration: none;
+        color: black;
+        margin: 1em 0;
+        border-radius: 40px;
+        background : linear-gradient(90deg, #0162c8, #55e7fc);
+    }
+    .button {
+        padding-right : 20vh;
+        padding-left: 20vh;
+    }
+    a {
+        text-decoration: none;
+    }
+
+    .form {
+        margin-right : 0;
+        margin-left : 0;
+    }
+}
