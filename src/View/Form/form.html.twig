@@ -1,0 +1,68 @@
+
+<link rel="stylesheet" href="css/form.css">
+{% block content %}
+<div class="container">
+    <form action="">
+    <div class="row">
+        <div class="col">
+            <h3 class="title">billing address</h3>
+
+            <div class=" inputBox">
+                <span>full name:</span>
+                <input type="text" placeholder="john doe">
+            </div>
+
+            <div class= "inputBox">
+                <span>email :</span>
+                <input type="email" placeholder="example@gmail.com">            
+            </div>
+
+            <div class= "inputBox">
+                <span>address :</span>
+                <input type="text" placeholder="room - street - locality">            
+            </div>
+
+            <div class= "inputBox">
+                <span>city :</span>
+                <input type="text" placeholder="Bordeaux">    
+            </div>
+                
+            <div class="flex">
+                <div class= "inputBox">
+                    <span>country :</span>
+                    <input type="email" placeholder="France">            
+                </div>
+
+                <div class= "inputBox">
+                    <span>zip code :</span>
+                    <input type="email" placeholder="33000">            
+                </div>
+            </div>
+    
+      
+      <div>
+        <label for="arrival-date">Date of arrival</label>
+        <input type="date" name="arrival-date" size="50">
+        </div>
+        <div>
+        <label for="departure-date">Date of departure</label>
+        <input type="date" name="departure-date" size="35">
+        </div>
+        <br/>
+        <div class="button">
+        <a href="https://buy.stripe.com/test_5kA3dZbty3Cy4CIeUV">
+               <span>BOOK</span>
+        </a>
+        </div>
+
+        <input type="checkbox" id="terms">
+        <label for="terms">I have read and agreed with 
+            <a href="">the terms and conditions.</a></label>
+
+        </div>
+    </div>
+</div>
+
+    </form>
+    </div>
+    {% end block %}
