@@ -1,0 +1,67 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Location:
+{% endblock %}
+
+{% block content %}
+
+	<Section class="page-container">
+
+		<div class="location-header">
+			<div>
+				<div class="location-img" style="background-image: url('assets/images/Locations/Hinuera_Valley.jpg');background-size: cover">
+					<p>Hobbiton</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="location-info">
+			<div class="location-movie">
+				Lord of the Rings, Hinuera Valley
+			</div>
+		</div>
+
+		<div class="packages-container">
+
+			<div class="package-container">
+				<p class="package-label">Package 1</p>
+				<div class="package p1">
+					<div class="package-info1">
+						<ul class="pack-list1">
+							<li>Hotel name</li>
+							<li>Activities</li>
+							<li class="package-price">€{{ price.price }}</li>
+							<li>
+								<a href="http://localhost:8000/form" class="book-bttn">Book</a>
+							</li>
+						</ul>
+						<img src="assets/images/Locations/Hinuera_Valley.jpg" alt="" class="package-img">
+					</div>
+				</div>
+			</div>
+
+			<div class="package-container">
+				<p class="package-label">Package 2</p>
+				<div class="package p2">
+					<div class="package-info2">
+						<ul class="pack-list2">
+							<li>Luxury Hotel name</li>
+                            <li>All inclusive</li>
+							<li>Activities</li>
+							<li class="package-price">€1000</li>
+							<li>
+								<a href="http://localhost:8000/form" class="book-bttn">Book</a>
+							</li>
+						</ul>
+						<img src="assets/images/Locations/Hinuera_Valley.jpg" alt="" class="package-img">
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+	</Section>
+
+{% endblock %}
+
