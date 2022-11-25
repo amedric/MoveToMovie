@@ -4,6 +4,7 @@
 
 /* homepage */
 @import "general/homepage-style.css";
+@import "general/location.css";
 
 /* general CSS */
 :root {
