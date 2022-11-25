@@ -3,16 +3,44 @@
 {% block title %}Move to movie | Homepage{% endblock %}
 
 {% block content %}
-    <div class="homepage-container">
+<div class="homepage-container">
 
-        {# full screen opening #}
-        <div class="random-carousel">
-            <div class="site-name">
-                <h1>MOVE TO MOVIE</h1>
-                <p>Stop watching, start travelling</p>
-            </div>
-            <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+    {# full screen opening #}
+    <div class="random-carousel" id="slide-1">
+        <div class="site-name">
+            <h1>MOVE TO MOVIE</h1>
+            <p>Stop watching, start travelling</p>
         </div>
+        <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+    </div>
+    <div class="random-carousel" id="slide-2">
+        <div class="site-name">
+            <h1>MOVE TO MOVIE</h1>
+            <p>Stop watching, start travelling</p>
+        </div>
+        <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+    </div>
+    <div class="random-carousel" id="slide-3">
+        <div class="site-name">
+            <h1>MOVE TO MOVIE</h1>
+            <p>Stop watching, start travelling</p>
+        </div>
+        <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+    </div>
+    <div class="random-carousel" id="slide-4">
+        <div class="site-name">
+            <h1>MOVE TO MOVIE</h1>
+            <p>Stop watching, start travelling</p>
+        </div>
+        <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+    </div>
+    <div class="random-carousel" id="slide-5">
+        <div class="site-name">
+            <h1>MOVE TO MOVIE</h1>
+            <p>Stop watching, start travelling</p>
+        </div>
+        <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+    </div>
 
         {# movie cards #}
         <div class="homepage-movie-cards">
@@ -35,5 +63,6 @@
             {% endfor %}
         </div>
     </div>
-{% endblock %}
 
+    <script src="assets/js/random-slideshow.js"></script>
+    {% endblock %}
