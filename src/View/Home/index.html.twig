@@ -56,15 +56,14 @@
                             <div class="card__content">
                                 {% for imgLocation in imgLocations %}
                                     {% if imgLocation.movie_id == movie.id %}
-                                        {% if imgLocation.img == 1 %}
-                                            <div class="card__header"
-                                                 style="background: url('{{ imgLocation.img }}') center; background-size: cover; height: 100%">
-                                            </div>
-                                        {% else %}
+                                <a href="http://localhost:8000/location?id={{ imgLocation.id }}">
                                                 <div class="card__header"
                                                      style="background: url('{{ imgLocation.img }}') center; background-size: cover ; height: 50%">
+
+                                                    <h3>{{ imgLocation.city }}</h3>
+
                                                 </div>
-                                        {% endif %}
+                                </a>
                                     {% endif %}
                                 {% endfor %}
                             </div>
