@@ -9,7 +9,7 @@
 
         <div class="location-header">
             <div>
-                <div class="location-img" style="background-image: url('{{ location.img }}');background-size: cover">
+                <div class="location-img" style="background-image: url('{{ location.location_img }}');background-size: cover;background-position: center">
                     <p>{{ location.fictive_city }}</p>
                 </div>
             </div>
@@ -28,9 +28,9 @@
                 <div class="package p1">
                     <div class="package-info1">
                         <ul class="pack-list1">
-                            <li>Hotel name</li>
-                            <li>Activities</li>
-                            <li class="package-price">{{ basePrice }} €, inc. VAT</li>
+                            <li>Flight</li>
+                            <li>Hotel</li>
+                            <li class="package-price">499 €, inc. VAT</li>
                             <li>
                                 <a href="http://localhost:8000/form" class="book-bttn">Book</a>
                             </li>
@@ -45,11 +45,10 @@
                 <div class="package p2">
                     <div class="package-info2">
                         <ul class="pack-list2">
+                            <li>Flight</li>
                             <li>{{ location.hotel_name }}</li>
                             <li>All inclusive</li>
-                            {% if location.activities is not null %}
-                                <li>{{ location.activities }}</li>
-                            {% endif %}
+                            <li>Private guided tour</li>
                             <li class="package-price">{{ location.price }} €, inc. VAT</li>
                             <li>
                                 <a href="http://localhost:8000/form?id={{ location.id }}" class="book-bttn">Book</a>

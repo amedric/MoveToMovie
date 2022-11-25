@@ -10,26 +10,27 @@ class LocationManager extends AbstractManager
     {
         // prepared request
         $statement = $this->pdo->prepare(
-            "SELECT p.id,
+            "SELECT p.package_id,
        p.hotel_name,
        p.price,
        p.activities,
        p.picture1,
        p.picture2,
        p.picture3,
-       l.id,
+       l.location_id,
        l.country,
        l.city,
        l.fictive_city,
-       l.img,
+       l.location_img,
        l.movie_id,
-       m.id,
+       m.movie_id,
        m.name,
-       m.img
+       m.movie_img
 FROM movie m
-         JOIN location l on m.id = l.movie_id
-    JOIN package p on l.id = p.location_id
-WHERE l.id = :id");
+         JOIN location l on m.movie_id = l.movie_id
+    JOIN package p on l.location_id = p.location_id
+WHERE l.location_id = :id"
+        );
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
         $statement->execute();
 
