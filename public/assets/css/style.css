@@ -5,6 +5,7 @@
 @import "general/homepage-style.css";
 @import "general/location.css";
 @import "general/form.css";
+@import "general/successful.css";
 
 /* general CSS */
 :root {
