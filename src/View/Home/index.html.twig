@@ -3,44 +3,44 @@
 {% block title %}Move to movie | Homepage{% endblock %}
 
 {% block content %}
-<div class="homepage-container">
+    <div class="homepage-container">
 
-    {# full screen opening #}
-    <div class="random-carousel" id="slide-1">
-        <div class="site-name">
-            <h1>MOVE TO MOVIE</h1>
-            <p>Stop watching, start travelling</p>
+        {# full screen opening #}
+        <div class="random-carousel" id="slide-1">
+            <div class="site-name">
+                <h1>MOVE TO MOVIE</h1>
+                <p>Stop watching, start travelling</p>
+            </div>
+            <p class="catchphrase">Visit the filming locations of your favorite movies</p>
         </div>
-        <p class="catchphrase">Visit the filming locations of your favorite movies</p>
-    </div>
-    <div class="random-carousel" id="slide-2">
-        <div class="site-name">
-            <h1>MOVE TO MOVIE</h1>
-            <p>Stop watching, start travelling</p>
+        <div class="random-carousel" id="slide-2">
+            <div class="site-name">
+                <h1>MOVE TO MOVIE</h1>
+                <p>Stop watching, start travelling</p>
+            </div>
+            <p class="catchphrase">Visit the filming locations of your favorite movies</p>
         </div>
-        <p class="catchphrase">Visit the filming locations of your favorite movies</p>
-    </div>
-    <div class="random-carousel" id="slide-3">
-        <div class="site-name">
-            <h1>MOVE TO MOVIE</h1>
-            <p>Stop watching, start travelling</p>
+        <div class="random-carousel" id="slide-3">
+            <div class="site-name">
+                <h1>MOVE TO MOVIE</h1>
+                <p>Stop watching, start travelling</p>
+            </div>
+            <p class="catchphrase">Visit the filming locations of your favorite movies</p>
         </div>
-        <p class="catchphrase">Visit the filming locations of your favorite movies</p>
-    </div>
-    <div class="random-carousel" id="slide-4">
-        <div class="site-name">
-            <h1>MOVE TO MOVIE</h1>
-            <p>Stop watching, start travelling</p>
+        <div class="random-carousel" id="slide-4">
+            <div class="site-name">
+                <h1>MOVE TO MOVIE</h1>
+                <p>Stop watching, start travelling</p>
+            </div>
+            <p class="catchphrase">Visit the filming locations of your favorite movies</p>
         </div>
-        <p class="catchphrase">Visit the filming locations of your favorite movies</p>
-    </div>
-    <div class="random-carousel" id="slide-5">
-        <div class="site-name">
-            <h1>MOVE TO MOVIE</h1>
-            <p>Stop watching, start travelling</p>
+        <div class="random-carousel" id="slide-5">
+            <div class="site-name">
+                <h1>MOVE TO MOVIE</h1>
+                <p>Stop watching, start travelling</p>
+            </div>
+            <p class="catchphrase">Visit the filming locations of your favorite movies</p>
         </div>
-        <p class="catchphrase">Visit the filming locations of your favorite movies</p>
-    </div>
 
         {# movie cards #}
         <div class="homepage-movie-cards">
@@ -49,13 +49,24 @@
             {% for movie in movies %}
                 <div class="card">
                     <div class="card__inner">
-                        <div class="card__face card__face--front" style="background: url('{{ movie.img }}') center; background-size: cover">
+                        <div class="card__face card__face--front"
+                             style="background: url('{{ movie.img }}') center; background-size: cover">
                         </div>
                         <div class="card__face card__face--back">
                             <div class="card__content">
-                                <div class="card__header">
-                                    <img src="{{ movie[0] }}" alt="{{ movie[0] }} cover" class="back-class">
-                                </div>
+                                {% for imgLocation in imgLocations %}
+                                    {% if imgLocation.movie_id == movie.id %}
+                                        {% if imgLocation.img == 1 %}
+                                            <div class="card__header"
+                                                 style="background: url('{{ imgLocation.img }}') center; background-size: cover; height: 100%">
+                                            </div>
+                                        {% else %}
+                                                <div class="card__header"
+                                                     style="background: url('{{ imgLocation.img }}') center; background-size: cover ; height: 50%">
+                                                </div>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -65,4 +76,4 @@
     </div>
 
     <script src="assets/js/random-slideshow.js"></script>
-    {% endblock %}
+{% endblock %}

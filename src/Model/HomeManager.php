@@ -15,4 +15,13 @@ class HomeManager extends AbstractManager
 
         return $statement->fetchAll();
     }
+
+    public function selectAllLocation(): array
+    {
+        $query = 'SELECT * FROM location';
+        $statement = $this->pdo->query($query);
+
+        return $statement->fetchAll();
+
+    }
 }
