@@ -2,13 +2,17 @@
 
 namespace App\Controller;
 
+use App\Model\LocationManager;
+
 class LocationController extends AbstractController
 {
-    /**
-     * Display home page
-     */
-    public function location(): string
+    public function showLocation(): string
     {
-        return $this->twig->render('location.html.twig');
+        $location = new LocationManager();
+        $id = $_GET['id'];
+        $showLocation = $location->showLocationById($id);
+        $altPrice = $showLocation['price'] - 200;
+
+        return $this->twig->render('/location.html.twig', ['location' => $showLocation, 'basePrice' => $altPrice]);
     }
 }
