@@ -20,7 +20,6 @@
 .location-img p{
     font-size: 45px;
     text-shadow: 2px 2px 2px rgb(24, 24, 24);
-
 }
 
 .location-info{
@@ -56,7 +55,8 @@
     justify-content: center;
     height: 21.5vh;
     border-radius: 20px;
-    border: 2px solid rgb(84, 84, 84);
+    /* border: 2px solid rgb(84, 84, 84); */
+    box-shadow: 0 10px 15px 0 rgb(24, 24, 24);
     overflow: hidden;
 }
 
