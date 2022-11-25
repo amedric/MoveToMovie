@@ -4,28 +4,57 @@
 
 /* fullscreen welcome page */
 
+/* ------- carousel and slides -------- */
 .random-carousel {
     height: 100vh;
     padding: 0.5em;
-    background-image: url("../../images/Dubrovnik-Croatia.jpg");
     background-position: center;
     background-size: cover;
     filter: grayscale(30%);
+    align-items: center;
+    justify-content: center;
 }
+
+#slide-1 {
+    background-image: url("../../location/canyonlands.jpg");
+}
+
+#slide-2 {
+    background-image: url("../../location/iceland.jpg");
+}
+
+#slide-3 {
+    background-image: url("../../location/khazneh.jpg");
+}
+
+#slide-4 {
+    background-image: url("../../location/lac Powell.jpg");
+}
+
+#slide-5 {
+    background-image: url("../../location/Thingvellir.jpg");
+}
+/* ------- end of carousel -------- */
 
 .site-name, .random-carousel p {
     color: white;
 }
 
+.random-carousel h1, .random-carousel p {
+    text-shadow: 1px 1px 5px black;
+}
+
 .site-name {
+    position: absolute;
+    top: 0;
+    margin: 1em 0 0 1em;
     text-align: center;
 }
 
 .catchphrase {
-    margin-top: 4em;
     font-size: 3em;
     text-align: center;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 1px 1px 10px black;
 }
 
 /* movie cards */
@@ -65,21 +94,11 @@
 }
 
 @media screen and (min-width: 481px) {
-    .random-carousel {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .site-name {
-        position: absolute;
-        top: 0;
         left: 0;
-        margin: 1em 0 0 1em;
     }
 
     .catchphrase {
-        margin-top: 5em;
         font-weight: bold;
         max-width: 90vw;
     }
