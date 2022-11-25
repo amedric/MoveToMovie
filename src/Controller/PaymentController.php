@@ -4,8 +4,11 @@ namespace App\Controller;
 
 class PaymentController extends AbstractController
 {
-    public function successful(): string
+    public function successful()
     {
-        return $this->twig->render('payment/successful.html.twig');
+
+        $data = $_SESSION;
+
+        return $this->twig->render('payment/successful.html.twig', ['data' => $data]);
     }
 }
