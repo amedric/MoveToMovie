@@ -1,6 +1,6 @@
 .homepage-container {
     width: 100%;
-    /* background-color: rgb(255, 242, 190); */
+     background: linear-gradient(0deg, black, white 90%, white);
 }
 
 /* fullscreen welcome page */
@@ -42,12 +42,14 @@
 }
 /* ------- end of carousel -------- */
 
-.site-name, .random-carousel p {
+.site-name {
     color: white;
+    text-shadow: 8px 8px 50px black;
 }
 
-.random-carousel h1, .random-carousel p {
+.random-carousel p {
     text-shadow: 8px 8px 50px black;
+    color: white;
 }
 
 .site-name {
@@ -66,6 +68,8 @@
     background-color: rgb(0, 0, 0, 0.2);
 }
 
+
+
 /* movie cards */
 
 .homepage-movie-cards {
@@ -76,7 +80,7 @@
     text-align: center;
     padding: 0.5em;
     font-family: var(--titleFont);
-    color: beige;
+    color: black;
 }
 
 .location-link{
@@ -200,4 +204,8 @@
     bottom: 0;
     z-index: -1;
     border-radius: 0 0 50% 0;
+}
+
+a:hover {
+    opacity : 0.7;
 }
