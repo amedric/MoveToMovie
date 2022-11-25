@@ -18,39 +18,24 @@
         <div class="homepage-movie-cards">
             <p>Choose your next adventure!</p>
             {% for movie in movies %}
-                <div class="movie-card" onclick="flip()">
-                    <div class="front">
-                    <img src="{{ movie[1] }}" alt="{{ movie[0] }} cover" class="front-class">
+                <div class="card">
+                    <div class="card__inner">
+                        <div class="card__face card__face--front">
+                            <img src="{{ movie[1] }}" alt="{{ movie[0] }} cover" class="front-class">
+                        </div>
+                        <div class="card__face card__face--back">
+                            <div class="card__content">
+                                <div class="card__header">
+                                    <img src="{{ movie[0] }}" alt="{{ movie[0] }} cover" class="back-class">
+                                    <h2></h2>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="back">
-                    <img src="{{ movie[0] }}" alt="{{ movie[0] }} cover" class="back-class">
-                    </div>
-
-                    <h2 class="movie-title">{{ movie[0] }}</h2>
                 </div>
             {% endfor %}
         </div>
 
     </div>
-{% endblock %}
-
-{% block javascript %}
-
- <script>
-let back = document.getElementsByClassName('back-class');
-let front = document.getElementsByClassName('front-class')
-
-     for (i = 0; i < back.length; i++) {
-     back[i].style.display = 'none'
- }
- const card = document.querySelector('.movie-card')
-function flip() {
-         card.addEventListener("click", function() {
-             front.display.style ='none'
-             back.display.style = 'block'
- })
- }
-</script>
-
 {% endblock %}
 
