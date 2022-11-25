@@ -19,8 +19,8 @@
             <p>Choose your next adventure!</p>
             {% for movie in movies %}
                 <div class="movie-card">
-                    <img src="{{ movie[1] }}" alt="{{ movie[0] }} cover">
-                    <h2 class="movie-title">{{ movie[0] }}</h2>
+                    <img src="{{ movie.img }}" alt="{{ movie.name }} cover">
+                    <h2 class="movie-title">{{ movie.name }}</h2>
                 </div>
             {% endfor %}
         </div>

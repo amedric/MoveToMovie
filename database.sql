@@ -15,11 +15,12 @@ INSERT INTO `hackaton1`.`movie` (`name`, `img`) VALUES ('Game of thrones', '/ass
 INSERT INTO `hackaton1`.`movie` (`name`, `img`) VALUES ('Star wars', '/assets/movies/star_wars_picture.jpg');
 INSERT INTO `hackaton1`.`movie` (`name`, `img`) VALUES ('Avatar', '/assets/movies/avatar_picture.jpg');
 INSERT INTO `hackaton1`.`movie` (`name`, `img`) VALUES ('The beach', '/assets/movies/the_beach_picture.jpg');
-INSERT INTO `hackaton1`.`movie` (`name`, `img`) VALUES ('Interstellar', '/assets/movies/interstella_picture.jpg');
 INSERT INTO `hackaton1`.`movie` (`name`, `img`) VALUES ('Indiana Jones', '/assets/movies/IJ_picture.jpg');
 INSERT INTO `hackaton1`.`movie` (`name`, `img`) VALUES ('Into the wild', '/assets/movies/intothewild_picture.jpg');
 INSERT INTO `hackaton1`.`movie` (`name`, `img`) VALUES ('127 hours', '/assets/movies/127hours_picture.jpg');
 INSERT INTO `hackaton1`.`movie` (`name`, `img`) VALUES ('Planet of the Apes', '/assets/movies/planet_of_the_apes_picture.jpg');
+INSERT INTO `hackaton1`.`movie` (`name`, `img`) VALUES ('Interstellar', '/assets/movies/interstellar_picture.jpg');
+
 
 
 create table location
