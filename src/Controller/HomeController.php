@@ -13,7 +13,11 @@ class HomeController extends AbstractController
     {
         $movieImg = new HomeManager();
         $img = $movieImg->selectAll();
+        $imgLocations = $movieImg->selectAllLocation();
 
-        return $this->twig->render('Home/index.html.twig', ['movies' => $img]);
+
+        return $this->twig->render('Home/index.html.twig', [
+            'movies' => $img,
+            'imgLocations' => $imgLocations]);
     }
 }

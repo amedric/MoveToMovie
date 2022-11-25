@@ -2,6 +2,10 @@
 -- -----------------------------------------------------
 DROP SCHEMA IF EXISTS `hackaton1` ;
 
+CREATE DATABASE `hackaton1` ;
+
+USE `hackaton1` ;
+
 create table movie
 (
     id   int auto_increment
@@ -36,19 +40,19 @@ create table location
         foreign key (movie_id) references movie (id)
 );
 
-INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('New Zealand', 'Hobbits Village', 'Hobbiton', '/assets/location/hobitton.jpg', '1');
-INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('New Zealand', 'Tongariro National Park', 'Mount Doom', '/assets/location/hobitton.jpg', '1');
-INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('Croatia', 'Dubrovnik', 'King’s Landing', '/assets/location/tongariro.jpg', '2');
-INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('Iceland', 'Thingvellir National Park', 'Behind the wall', '/assets/location/dubrovnik.jpg', '2');
+INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('New Zealand', 'Hobbits Village', 'Hobbiton', '/assets/location/hobbiton.jpg', '1');
+INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('New Zealand', 'Tongariro National Park', 'Mount Doom', '/assets/location/tongariro.jpg', '1');
+INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('Croatia', 'Dubrovnik', 'King’s Landing', '/assets/location/dubrovnik.jpg', '2');
+INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('Iceland', 'Thingvellir National Park', 'Behind the wall', '/assets/location/Thingvellir.jpg', '2');
 INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('Tunisia', 'Tataouine', 'Tatooine', '/assets/location/tataouine.jpg', '3');
 INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('Italia', 'Etna volcano', 'Mustafar Planet', '/assets/location/etna.jpg', '3');
 INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('Croatia', 'Plitvice lakes', 'Pandora Lake', '/assets/location/plitvice.jpg', '4');
 INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('China', 'Zhangjiajie forest', 'Pandora mountains', '/assets/location/zhangjiajie.jpg', '4');
 INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('Thailand', 'Maya bay, Koh Phi Phi island', 'Unknown', '/assets/location/kophipphi.jpg', '5');
-INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('Iceland', 'Svínafellsjökull glacier', 'Planet Mann', '/assets/location/iceland.jpg', '6');
-INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('Jordania', 'Khazneh, Petra', 'Temple of Doom', '/assets/location/khazneh.jpg', '7');
-INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('South America', 'Iguazu falls', 'Kingdom of Crystal Skull', '/assets/location/iguazu.jpg', '7');
-INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('US', 'National park of Denali', 'National park of Denali', '/assets/location/denali.jpg', '8');
+INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('Iceland', 'Svínafellsjökull glacier', 'Planet Mann', '/assets/location/iceland.jpg', '8');
+INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('Jordania', 'Khazneh, Petra', 'Temple of Doom', '/assets/location/khazneh.jpg', '6');
+INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('South America', 'Iguazu falls', 'Kingdom of Crystal Skull', '/assets/location/iguazu.jpg', '6');
+INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('US', 'National park of Denali', 'National park of Denali', '/assets/location/denali.jpg', '7');
 INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('US', 'Canyonlands National park', 'Canyonlands National park', '/assets/location/canyonlands.jpg', '9');
 INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `img`, `movie_id`) VALUES ('US', 'Powell lake', 'Powell lake', '/assets/location/lac_powell.jpg', '10');
 
