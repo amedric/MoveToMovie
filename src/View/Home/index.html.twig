@@ -50,16 +50,16 @@
                 <div class="card">
                     <div class="card__inner">
                         <div class="card__face card__face--front"
-                             style="background: url('{{ movie.img }}') center; background-size: cover">
+                             style="background: url('{{ movie.movie_img }}') center; background-size: cover">
                         </div>
                         <div class="card__face card__face--back">
                             <img src="assets/images/back-icon.png" alt="" class="back-bttn">
                             <div class="card__content">
                                 {% for imgLocation in imgLocations %}
-                                    {% if imgLocation.movie_id == movie.id %}
-                                        <a href="/location?id={{ imgLocation.id }}" class="location-link">
+                                    {% if imgLocation.movie_id == movie.movie_id %}
+                                        <a href="/location?id={{ imgLocation.location_id }}" class="location-link">
                                             <div class="card__header"
-                                                 style="background: url('{{ imgLocation.img }}') center;
+                                                 style="background: url('{{ imgLocation.location_img }}') center;
                                                      background-size: cover ; height: 50%">
                                                 <h3>{{ imgLocation.fictive_city }}</h3>
                                                 <h3>{{ imgLocation.city }}, {{ imgLocation.country }}</h3>

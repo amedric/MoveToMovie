@@ -103,23 +103,23 @@ create table package
 );
 
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`, `picture3`)
-VALUES ('Beach resort', '1', '9', '/assets/accomodation/beach1', '/assets/accomodation/beach2',
-        '/assets/accomodation/beach3');
+VALUES ('Beach resort', '1', '9', '/assets/accomodation/beach1.webp', '/assets/accomodation/beach2.jpg',
+        '/assets/accomodation/beach3.jpg');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`)
-VALUES ('Hobbit house', '1', '1', '/assets/accomodation/hobbit', '/assets/accomodation/hobbit2');
+VALUES ('Hobbit house', '1', '1', '/assets/accomodation/hobbit.jpeg', '/assets/accomodation/hobbit2.jpg');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`)
-VALUES ('Bubble house', '1', '4', '/assets/accomodation/islande1', '/assets/accomodation/islande2');
+VALUES ('Bubble house', '1', '4', '/assets/accomodation/islande1.jpg', '/assets/accomodation/islande2.jpg');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`)
-VALUES ('Petra resort', '1', '11', '/assets/accomodation/jordanie', '/assets/accomodation/jordanie2');
+VALUES ('Petra resort', '1', '11', '/assets/accomodation/jordanie', '/assets/accomodation/jordanie2.jpg');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `price`, `location_id`, `picture1`, `picture2`)
-VALUES ('Plitvice', '1', 1700, '7', '/assets/accomodation/plitvice', '/assets/accomodation/plitvice2');
+VALUES ('Plitvice', '1', 1700, '7', '/assets/accomodation/Plitvice.jpg', '/assets/accomodation/Plitvice2.jpg');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`, `picture3`)
-VALUES ('Sixx hotell', '1', '8', '/assets/accomodation/zhanggjiajie', '/assets/accomodation/chine1',
-        '/assets/accomodation/chine2');
+VALUES ('Sixx hotell', '1', '8', '/assets/accomodation/zhanggjiajie.webp', '/assets/accomodation/chine1.jpg',
+        '/assets/accomodation/chine2.jpg');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`)
-VALUES ('SKYCITY Grand Hôtel', '1', '2', '/assets/accomodation/nouvelle-zelande');
+VALUES ('SKYCITY Grand Hôtel', '1', '2', '/assets/accomodation/nouvel-zelande.jpg');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`)
-VALUES ('Dubrovnik villa', '1', '3', '/assets/accomodation/dubrivnik1', '/assets/accomodation/dubrovnik2');
+VALUES ('Dubrovnik villa', '1', '3', '/assets/accomodation/dubrovnik1.webp', '/assets/accomodation/dubrovnik2.webp');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`)
 VALUES ('Sangho Privilege', '1', '5', '/assets/accomodation/tataouine1', '/assets/accomodation/tataouine2');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`)
