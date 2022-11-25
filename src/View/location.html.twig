@@ -5,63 +5,69 @@
 
 {% block content %}
 
-	<Section class="page-container">
+    <Section class="page-container">
 
-		<div class="location-header">
-			<div>
-				<div class="location-img" style="background-image: url('assets/images/Locations/Hinuera_Valley.jpg');background-size: cover">
-					<p>Hobbiton</p>
-				</div>
-			</div>
-		</div>
+        <div class="location-header">
+            <div>
+                <div class="location-img" style="background-image: url('{{ location.img }}');background-size: cover">
+                    <p>{{ location.fictive_city }}</p>
+                </div>
+            </div>
+        </div>
 
-		<div class="location-info">
-			<div class="location-movie">
-				Lord of the Rings, Hinuera Valley
-			</div>
-		</div>
+        <div class="location-info">
+            <div class="location-movie">
+                {{ location.name }}, {{ location.country }}
+            </div>
+        </div>
 
-		<div class="packages-container">
+        <div class="packages-container">
 
-			<div class="package-container">
-				<p class="package-label">Package 1</p>
-				<div class="package p1">
-					<div class="package-info1">
-						<ul class="pack-list1">
-							<li>Hotel name</li>
-							<li>Activities</li>
-							<li class="package-price">€{{ price.price }}</li>
-							<li>
-								<a href="http://localhost:8000/form" class="book-bttn">Book</a>
-							</li>
-						</ul>
-						<img src="assets/images/Locations/Hinuera_Valley.jpg" alt="" class="package-img">
-					</div>
-				</div>
-			</div>
+            <div class="package-container">
+                <p class="package-label">Base package</p>
+                <div class="package p1">
+                    <div class="package-info1">
+                        <ul class="pack-list1">
+                            <li>Hotel name</li>
+                            <li>Activities</li>
+                            <li class="package-price">{{ basePrice }} €, inc. VAT</li>
+                            <li>
+                                <a href="http://localhost:8000/form" class="book-bttn">Book</a>
+                            </li>
+                        </ul>
+                        <img src="{{ location.picture1 }}" alt="" class="package-img">
+                    </div>
+                </div>
+            </div>
 
-			<div class="package-container">
-				<p class="package-label">Package 2</p>
-				<div class="package p2">
-					<div class="package-info2">
-						<ul class="pack-list2">
-							<li>Luxury Hotel name</li>
+            <div class="package-container">
+                <p class="package-label">VIP package</p>
+                <div class="package p2">
+                    <div class="package-info2">
+                        <ul class="pack-list2">
+                            <li>{{ location.hotel_name }}</li>
                             <li>All inclusive</li>
-							<li>Activities</li>
-							<li class="package-price">€1000</li>
-							<li>
-								<a href="http://localhost:8000/form" class="book-bttn">Book</a>
-							</li>
-						</ul>
-						<img src="assets/images/Locations/Hinuera_Valley.jpg" alt="" class="package-img">
-					</div>
-				</div>
-			</div>
+                            {% if location.activities is not null %}
+                                <li>{{ location.activities }}</li>
+                            {% endif %}
+                            <li class="package-price">{{ location.price }} €, inc. VAT</li>
+                            <li>
+                                <a href="http://localhost:8000/form?id={{ location.id }}" class="book-bttn">Book</a>
+                            </li>
+                        </ul>
+                        {% if location.picture2 %}
+                            <img src="{{ location.picture2 }}" alt="Hotel picture" class="package-img">
+                        {% else %}
+                            <img src="{{ location.picture1 }}" alt="Hotel picture" class="package-img">
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
 
-		</div>
+        </div>
 
 
-	</Section>
+    </Section>
 
 {% endblock %}
 
