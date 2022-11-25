@@ -39,11 +39,38 @@
     padding: 0.5em;
 }
 
-.homepage-movie-cards img {
-    display: block;
+.movie-card img {
     width: 100%;
     margin: 0 auto;
     border-radius: 15px;
+    position : relative;
+    /*backface-visibility: hidden;*/
+}
+
+#back-class {
+    display: none;
+}
+
+/*.front {*/
+/*    width: 100%;*/
+/*    margin: 0 auto;*/
+/*    border-radius: 15px;*/
+/*    position : relative;*/
+/*    !*backface-visibility: hidden;*!*/
+/*}*/
+
+/*.back {*/
+/*    position : absolute;*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    margin: 0 auto;*/
+/*    border-radius: 15px;*/
+/*    transform: rotateY(180deg);*/
+/*    !*backface-visibility: hidden;*!*/
+
+/*}*/
+.flip-card {
+    transform: rotateY(180deg);
 }
 
 .movie-card {
