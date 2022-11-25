@@ -3,30 +3,66 @@
 {% block title %}Move to movie | Homepage{% endblock %}
 
 {% block content %}
-    <div class="homepage-container">
+<div class="homepage-container">
 
-        {# full screen opening #}
-        <div class="random-carousel">
-            <div class="site-name">
-                <h1>MOVE TO MOVIE</h1>
-                <p>Stop watching, start travelling</p>
-            </div>
-            <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+    {# full screen opening #}
+    <div class="random-carousel" id="slide-1">
+        <div class="site-name">
+            <h1>MOVE TO MOVIE</h1>
+            <p>Stop watching, start travelling</p>
         </div>
+        <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+    </div>
+    <div class="random-carousel" id="slide-2">
+        <div class="site-name">
+            <h1>MOVE TO MOVIE</h1>
+            <p>Stop watching, start travelling</p>
+        </div>
+        <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+    </div>
+    <div class="random-carousel" id="slide-3">
+        <div class="site-name">
+            <h1>MOVE TO MOVIE</h1>
+            <p>Stop watching, start travelling</p>
+        </div>
+        <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+    </div>
+    <div class="random-carousel" id="slide-4">
+        <div class="site-name">
+            <h1>MOVE TO MOVIE</h1>
+            <p>Stop watching, start travelling</p>
+        </div>
+        <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+    </div>
+    <div class="random-carousel" id="slide-5">
+        <div class="site-name">
+            <h1>MOVE TO MOVIE</h1>
+            <p>Stop watching, start travelling</p>
+        </div>
+        <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+    </div>
 
         {# movie cards #}
         <div class="homepage-movie-cards">
             <p>Choose your next adventure!</p>
+
             {% for movie in movies %}
-                <div class="movie-card">
-                    <a href="/location?id={{ movie.id }}">
-                        {{ dump(movie.id) }}
-                        <img src="{{ movie.img }}" alt="{{ movie.name }} cover">
-                    </a>
-                    <h2 class="movie-title">{{ movie.name }}</h2>
+                <div class="card">
+                    <div class="card__inner">
+                        <div class="card__face card__face--front" style="background: url('{{ movie.img }}') center; background-size: cover">
+                        </div>
+                        <div class="card__face card__face--back">
+                            <div class="card__content">
+                                <div class="card__header">
+                                    <img src="{{ movie[0] }}" alt="{{ movie[0] }} cover" class="back-class">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             {% endfor %}
         </div>
-
     </div>
-{% endblock %}
+
+    <script src="assets/js/random-slideshow.js"></script>
+    {% endblock %}
