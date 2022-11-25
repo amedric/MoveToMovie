@@ -53,20 +53,22 @@
                              style="background: url('{{ movie.img }}') center; background-size: cover">
                         </div>
                         <div class="card__face card__face--back">
+                            <img src="assets/images/back-icon.png" alt="" class="back-bttn">
                             <div class="card__content">
                                 {% for imgLocation in imgLocations %}
                                     {% if imgLocation.movie_id == movie.id %}
-                                <a href="/location?id={{ imgLocation.id }}">
-                                                <div class="card__header"
-                                                     style="background: url('{{ imgLocation.img }}') center; background-size: cover ; height: 50%">
-
-                                                    <h3>{{ imgLocation.city }}</h3>
-
-                                                </div>
-                                </a>
+                                        <a href="/location?id={{ imgLocation.id }}" class="location-link">
+                                            <div class="card__header"
+                                                 style="background: url('{{ imgLocation.img }}') center;
+                                                     background-size: cover ; height: 50%">
+                                                <h3>{{ imgLocation.fictive_city }}</h3>
+                                                <h3>{{ imgLocation.city }}, {{ imgLocation.country }}</h3>
+                                            </div>
+                                        </a>
                                     {% endif %}
                                 {% endfor %}
                             </div>
+
                         </div>
                     </div>
                 </div>

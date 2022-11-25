@@ -15,7 +15,6 @@ class HomeController extends AbstractController
         $img = $movieImg->selectAll();
         $imgLocations = $movieImg->selectAllLocation();
 
-
         return $this->twig->render('Home/index.html.twig', [
             'movies' => $img,
             'imgLocations' => $imgLocations]);
