@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Model\HomeManager;
+
 class HomeController extends AbstractController
 {
     /**
@@ -9,15 +11,9 @@ class HomeController extends AbstractController
      */
     public function index(): string
     {
-        $movieList = [
-            ['Star Wars', 'https://loremflickr.com/300/440/cat'],
-            ['Game of Thrones', 'https://loremflickr.com/300/440/dog'],
-            ['Lord of the Rings', 'https://loremflickr.com/300/440/horse'],
-            ['Interstellar', 'https://loremflickr.com/300/440/duck'],
-            ['Mad Max', 'https://loremflickr.com/300/440/frog'],
-            ['Stargate', 'https://loremflickr.com/300/440/alien'],
-        ];
+        $movieImg = new HomeManager();
+        $img = $movieImg->selectAll();
 
-        return $this->twig->render('Home/index.html.twig', ['movies' => $movieList]);
+        return $this->twig->render('Home/index.html.twig', ['movies' => $img]);
     }
 }
