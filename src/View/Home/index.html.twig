@@ -56,15 +56,9 @@
                             <div class="card__content">
                                 {% for imgLocation in imgLocations %}
                                     {% if imgLocation.movie_id == movie.id %}
-                                        {% if imgLocation.img == 1 %}
-                                            <div class="card__header"
-                                                 style="background: url('{{ imgLocation.img }}') center; background-size: cover; height: 100%">
-                                            </div>
-                                        {% else %}
-                                                <div class="card__header"
-                                                     style="background: url('{{ imgLocation.img }}') center; background-size: cover ; height: 50%">
-                                                </div>
-                                        {% endif %}
+                                        <div class="card__header"
+                                             style="background: url('{{ imgLocation.img }}') center; background-size: cover ; height: 50%">
+                                        </div>
                                     {% endif %}
                                 {% endfor %}
                             </div>
