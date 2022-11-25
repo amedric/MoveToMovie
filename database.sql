@@ -10,7 +10,7 @@ create table movie
     img  text         null
 );
 
-INSERT INTO `hackaton1`.`movie` (`name`, `img`) VALUES ('Lord of the rings', '/assets/movies/LOTR_picture.jpg');
+INSERT INTO `hackaton1`.`movie` (`name`, `img`) VALUES ('Lord of the rings', '/assets/movies/TLOTR_picture.jpg');
 INSERT INTO `hackaton1`.`movie` (`name`, `img`) VALUES ('Game of thrones', '/assets/movies/GOT_picture.jpg');
 INSERT INTO `hackaton1`.`movie` (`name`, `img`) VALUES ('Star wars', '/assets/movies/star_wars_picture.jpg');
 INSERT INTO `hackaton1`.`movie` (`name`, `img`) VALUES ('Avatar', '/assets/movies/avatar_picture.jpg');
