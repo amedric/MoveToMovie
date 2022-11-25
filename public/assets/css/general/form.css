@@ -12,7 +12,7 @@
 }
 
 .container{
-   display: flex; 
+   display: flex;
    justify-content: center;
    align-items: center;
    padding: 25px;
@@ -45,11 +45,11 @@ padding-bottom: 5px;
 text-transform: uppercase;
 }
 
-.container form .row .col .intputBox{
-  margin: 15px 0;  
+.container form .row .col .inputBox{
+  margin: 15px 0;
 }
 
-.container form .row .col .intputBox span{
+.container form .row .col .inputBox span{
     margin-bottom: 10px;
     display: block;
 }
@@ -87,5 +87,5 @@ padding: 12px;
 
 .button:hover{
     background: #89cff0;
-    
+
 }

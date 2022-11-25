@@ -4,7 +4,7 @@
 /* homepage */
 @import "general/homepage-style.css";
 @import "general/location.css";
-@import "general/formAndPayment.css";
+@import "general/form.css";
 
 /* general CSS */
 :root {
