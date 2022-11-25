@@ -7,7 +7,7 @@ class HomeManager extends AbstractManager
 {
     public function selectAll(string $orderBy = '', string $direction = 'ASC'): array
     {
-        $query = 'SELECT img, name, id FROM movie';
+        $query = 'SELECT movie_img, name, movie_id FROM movie';
         if ($orderBy) {
             $query .= ' ORDER BY ' . $orderBy . ' ' . $direction;
         }
