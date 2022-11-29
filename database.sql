@@ -125,7 +125,7 @@ VALUES ('Sangho Privilege', '1', '5', '/assets/accomodation/tataouine1.jpg', '/a
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`)
 VALUES ('Volcano Villa', '1', '6', '/assets/accomodation/etna1.webp', '/assets/accomodation/etna2.webp');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`)
-VALUES ('Iguaza luxury', '1', '12', '/assets/accomodation/iguaza2');
+VALUES ('Iguaza luxury', '1', '12', '/assets/accomodation/iguaza2.jpg');
 
 
 create index fk_package_location1_idx
