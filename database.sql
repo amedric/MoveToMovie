@@ -21,9 +21,9 @@ VALUES ('Game of thrones', '/assets/movies/GOT_picture.jpg');
 INSERT INTO `hackaton1`.`movie` (`name`, `movie_img`)
 VALUES ('Star wars', '/assets/movies/star_wars_picture.jpg');
 INSERT INTO `hackaton1`.`movie` (`name`, `movie_img`)
-VALUES ('Avatar', '/assets/movies/avatar_picture.jpg');
+VALUES ('Avatar', '/assets/movies/Avatar_picture.jpg');
 INSERT INTO `hackaton1`.`movie` (`name`, `movie_img`)
-VALUES ('The beach', '/assets/movies/the_beach_picture.jpg');
+VALUES ('The beach', '/assets/movies/The_Beach_picture.jpg');
 INSERT INTO `hackaton1`.`movie` (`name`, `movie_img`)
 VALUES ('Indiana Jones', '/assets/movies/IJ_picture.jpg');
 INSERT INTO `hackaton1`.`movie` (`name`, `movie_img`)
@@ -57,9 +57,9 @@ VALUES ('New Zealand', 'Tongariro National Park', 'Mount Doom', '/assets/locatio
 INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `location_img`, `movie_id`)
 VALUES ('Croatia', 'Dubrovnik', 'King’s Landing', '/assets/location/dubrovnik.jpg', '2');
 INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `location_img`, `movie_id`)
-VALUES ('Iceland', 'Thingvellir National Park', 'Behind the wall', '/assets/location/Thingvellir.jpg', '2');
+VALUES ('Iceland', 'Thingvellir National Park', 'Behind the wall', '/assets/location/thingvellir.jpg', '2');
 INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `location_img`, `movie_id`)
-VALUES ('Tunisia', 'Tataouine', 'Tatooine', '/assets/location/tataouine.jpg', '3');
+VALUES ('Tunisia', 'Tataouine', 'Tatooine', '/assets/location/Tataouine.jpg', '3');
 INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `location_img`, `movie_id`)
 VALUES ('Italia', 'Etna volcano', 'Mustafar Planet', '/assets/location/etna.jpg', '3');
 INSERT INTO `hackaton1`.`location` (`country`, `city`, `fictive_city`, `location_img`, `movie_id`)
@@ -109,8 +109,8 @@ INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `pi
 VALUES ('Hobbit house', '1', '1', '/assets/accomodation/hobbit.jpeg', '/assets/accomodation/hobbit2.jpg');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`)
 VALUES ('Bubble house', '1', '4', '/assets/accomodation/islande1.jpg', '/assets/accomodation/islande2.jpg');
-INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`)
-VALUES ('Petra resort', '1', '11', '/assets/accomodation/jordanie', '/assets/accomodation/jordanie2.jpg');
+INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`)
+VALUES ('Petra resort', '1', '11', '/assets/accomodation/jordanie2.jpg');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `price`, `location_id`, `picture1`, `picture2`)
 VALUES ('Plitvice', '1', 1700, '7', '/assets/accomodation/Plitvice.jpg', '/assets/accomodation/Plitvice2.jpg');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`, `picture3`)
@@ -121,11 +121,11 @@ VALUES ('SKYCITY Grand Hôtel', '1', '2', '/assets/accomodation/nouvel-zelande.j
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`)
 VALUES ('Dubrovnik villa', '1', '3', '/assets/accomodation/dubrovnik1.webp', '/assets/accomodation/dubrovnik2.webp');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`)
-VALUES ('Sangho Privilege', '1', '5', '/assets/accomodation/tataouine1', '/assets/accomodation/tataouine2');
+VALUES ('Sangho Privilege', '1', '5', '/assets/accomodation/tataouine1.jpg', '/assets/accomodation/tataouine2.jpg');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`)
-VALUES ('Volcano Villa', '1', '6', '/assets/accomodation/etna1', '/assets/accomodation/etna2');
+VALUES ('Volcano Villa', '1', '6', '/assets/accomodation/etna1.webp', '/assets/accomodation/etna2.webp');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`)
-VALUES ('Iguaza luxury', '1', '12', '/assets/accomodation/iguaza2');
+VALUES ('Iguaza luxury', '1', '12', '/assets/accomodation/iguaza2.jpg');
 
 
 create index fk_package_location1_idx
