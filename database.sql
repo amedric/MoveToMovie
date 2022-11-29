@@ -110,7 +110,7 @@ VALUES ('Hobbit house', '1', '1', '/assets/accomodation/hobbit.jpeg', '/assets/a
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`)
 VALUES ('Bubble house', '1', '4', '/assets/accomodation/islande1.jpg', '/assets/accomodation/islande2.jpg');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`)
-VALUES ('Petra resort', '1', '11', '/assets/accomodation/jordanie2');
+VALUES ('Petra resort', '1', '11', '/assets/accomodation/jordanie2.jpg');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `price`, `location_id`, `picture1`, `picture2`)
 VALUES ('Plitvice', '1', 1700, '7', '/assets/accomodation/Plitvice.jpg', '/assets/accomodation/Plitvice2.jpg');
 INSERT INTO `hackaton1`.`package` (`hotel_name`, `inclusive`, `location_id`, `picture1`, `picture2`, `picture3`)
