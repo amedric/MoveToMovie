@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Model\HomeManager;
+
 class HomeController extends AbstractController
 {
     /**
@@ -9,6 +11,12 @@ class HomeController extends AbstractController
      */
     public function index(): string
     {
-        return $this->twig->render('Home/index.html.twig');
+        $movieImg = new HomeManager();
+        $img = $movieImg->selectAll();
+        $imgLocations = $movieImg->selectAllLocation();
+
+        return $this->twig->render('Home/index.html.twig', [
+            'movies' => $img,
+            'imgLocations' => $imgLocations]);
     }
 }

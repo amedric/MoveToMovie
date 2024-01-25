@@ -1,0 +1,241 @@
+.page-container{
+    height: 100%;
+    width: 100%;
+}
+
+.location-header{
+    height: 250px;
+    width: 100%;
+}
+
+.location-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    color: rgb(244, 244, 244);
+}
+
+.location-img p{
+    font-size: 45px;
+    text-shadow: 2px 2px 2px rgb(24, 24, 24);
+}
+
+.location-info{
+    margin: 10px;
+    width: 95%;
+}
+
+.packages-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px;
+    height: 52%;
+}
+
+.package-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px;
+    height: 52%;
+}
+
+.package-label{
+    margin-left: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.package{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 21.5vh;
+    border-radius: 20px;
+    /* border: 2px solid rgb(84, 84, 84); */
+    box-shadow: 0 10px 15px 0 rgb(24, 24, 24);
+    overflow: hidden;
+}
+
+.p1{
+    padding-left: 5vw;
+}
+
+.p2{
+    padding-right: 5vw;
+}
+
+.package-info1{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.package-info2{
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location-movie{
+    font-size: 20px;
+}
+
+.pack-list1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    list-style-type: none;
+}
+
+.pack-list2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    list-style-type: none;
+}
+
+.package-price{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.book-bttn {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    transition: all 275ms;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    border: 0px;
+    width: 100px;
+    background-color: rgb(255, 69, 69);
+    cursor: pointer;
+    user-select: none;
+    text-decoration:  none;
+}
+
+.book-bttn:hover {
+    transform: scale(1.10);
+    text-decoration: none;
+}
+
+.book-bttn:active {
+    transform: scale(0.95);
+}
+
+.package-img{
+    height: 100%;
+    width: 45vw;
+}
+
+@media only screen and (min-width: 769px) {
+
+    .pack-list1{
+        font-size: 20px;
+    }
+    
+    .pack-list2{
+        font-size: 20px;
+    }
+
+    .package-price{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 35px;
+    }
+
+    .book-bttn{
+        font-size: 25px;
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+
+    .location-img{
+        height: 450px;
+        align-items: unset;
+    }
+
+    .location-info{
+        margin-bottom: 45px;
+    }
+
+    .location-img p{
+        margin-top: 15px;
+        font-size: 80px;
+    }
+
+    .location-movie{
+        font-size: 45px;
+        color: rgb(244, 244, 244);
+    }
+
+    .packages-container{
+        flex-direction: row;
+        justify-content: space-around;
+        height: 70%;
+        width: 95%;
+    }
+    
+    .package-container{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 30px;
+        padding-top: 5px;
+        background-color: white;
+        border-radius: 40px;
+        height: 60vh;
+        width: 30vw;
+    }
+
+    .package-label{
+        font-size: 25px;
+    }
+
+    .package{
+        height: 80vh;
+        padding: 0;
+    }
+
+    .package-info1{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .pack-list1{
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .package-info2{
+        flex-direction: column-reverse;
+    }
+
+    .pack-list2{
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .package-img{
+        height: 55%;
+        width: 30vw;
+        background-size: cover;
+    }
+
+}

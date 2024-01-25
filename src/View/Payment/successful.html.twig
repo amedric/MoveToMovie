@@ -1,0 +1,30 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="successful-container" style="background: url('/assets/location/dubrovnik.jpg'); background-size: cover">
+
+        <div class="successful-block">
+            <div>
+
+                <h3>
+                    Thank you {{ data.name }}, your payment has been successful !
+                </h3>
+            </div>
+            <div>
+
+                <p class="text-validation-data">
+                    You will receive the details of your order by email soon ! <br>
+                    Email will be sent at : {{ data.email }}
+                </p>
+
+            </div>
+            <br>
+            <div>
+
+                <a href="/"><p>Return to the homepage</p></a>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

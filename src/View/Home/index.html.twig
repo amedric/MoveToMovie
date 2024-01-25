@@ -1,6 +1,80 @@
 {% extends 'layout.html.twig' %}
 
+{% block title %}Move to movie | Homepage{% endblock %}
+
 {% block content %}
-    <h1>Hello Wilder !</h1>
-    <p>Find a complete CRUD example on <a href="/items">/items</a> page.</p>
+    <div class="homepage-container">
+
+        {# full screen opening #}
+        <div class="random-carousel" id="slide-1">
+            <div class="site-name">
+                <h1>MOVE TO MOVIE</h1>
+                <p>Stop watching, start travelling</p>
+            </div>
+            <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+        </div>
+        <div class="random-carousel" id="slide-2">
+            <div class="site-name">
+                <h1>MOVE TO MOVIE</h1>
+                <p>Stop watching, start travelling</p>
+            </div>
+            <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+        </div>
+        <div class="random-carousel" id="slide-3">
+            <div class="site-name">
+                <h1>MOVE TO MOVIE</h1>
+                <p>Stop watching, start travelling</p>
+            </div>
+            <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+        </div>
+        <div class="random-carousel" id="slide-4">
+            <div class="site-name">
+                <h1>MOVE TO MOVIE</h1>
+                <p>Stop watching, start travelling</p>
+            </div>
+            <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+        </div>
+        <div class="random-carousel" id="slide-5">
+            <div class="site-name">
+                <h1>MOVE TO MOVIE</h1>
+                <p>Stop watching, start travelling</p>
+            </div>
+            <p class="catchphrase">Visit the filming locations of your favorite movies</p>
+        </div>
+
+        {# movie cards #}
+        <div class="homepage-movie-cards">
+            <p>Choose your next adventure!</p>
+
+            {% for movie in movies %}
+                <div class="card">
+                    <div class="card__inner">
+                        <div class="card__face card__face--front"
+                             style="background: url('{{ movie.movie_img }}') center; background-size: cover">
+                        </div>
+                        <div class="card__face card__face--back">
+                            <img src="assets/images/back-icon.png" alt="" class="back-bttn">
+                            <div class="card__content">
+                                {% for imgLocation in imgLocations %}
+                                    {% if imgLocation.movie_id == movie.movie_id %}
+                                        <a href="/location?id={{ imgLocation.location_id }}" class="location-link">
+                                            <div class="card__header"
+                                                 style="background: url('{{ imgLocation.location_img }}') center;
+                                                     background-size: cover ; height: 50%">
+                                                <h3>{{ imgLocation.fictive_city }}</h3>
+                                                <h3>{{ imgLocation.city }}, {{ imgLocation.country }}</h3>
+                                            </div>
+                                        </a>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="assets/js/random-slideshow.js"></script>
 {% endblock %}

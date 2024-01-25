@@ -9,12 +9,17 @@
     <title>{% block title %}{% endblock %}</title>
 
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/general/form.css">
+
     {% block stylesheet %}{% endblock %}
 </head>
 
 <body>
     {% block content %}{% endblock %}
     {% block javascript %}{% endblock %}
+
+    <script src="/assets/js/flipCard.js"></script>
+
 </body>
 </html>
 

@@ -1,0 +1,211 @@
+.homepage-container {
+    width: 100%;
+     background: linear-gradient(0deg, black, white 90%, white);
+}
+
+/* fullscreen welcome page */
+
+/* ------- carousel and slides -------- */
+.random-carousel {
+    height: 100vh;
+    padding: 0.5em;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(30%);
+    align-items: center;
+    justify-content: center;
+}
+
+#slide-1 {
+    background-image: url("../../location/canyonlands.jpg");
+    filter: grayscale(30%);
+}
+
+#slide-2 {
+    background-image: url("../../location/iceland.jpg");
+    filter: grayscale(80%);
+}
+
+#slide-3 {
+    background-image: url("../../location/khazneh.jpg");
+    filter: grayscale(30%);
+}
+
+#slide-4 {
+    background-image: url("../../location/lac_powell.jpg");
+    filter: grayscale(30%);
+}
+
+#slide-5 {
+    background-image: url("../../location/thingvellir.jpg");
+    filter: grayscale(30%);
+}
+/* ------- end of carousel -------- */
+
+.site-name {
+    color: white;
+    text-shadow: 8px 8px 50px black;
+}
+
+.random-carousel p {
+    text-shadow: 8px 8px 50px black;
+    color: white;
+}
+
+.site-name {
+    position: absolute;
+    top: 0;
+    margin: 1em 0 0 1em;
+    font-size: 20px;
+    text-align: center;
+}
+
+.catchphrase {
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 8px 8px 50px 5px black;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0, 0.2);
+}
+
+
+
+/* movie cards */
+
+.homepage-movie-cards {
+    padding: 0.5em;
+}
+
+.homepage-movie-cards p {
+    text-align: center;
+    padding: 0.5em;
+    font-family: var(--titleFont);
+    color: black;
+}
+
+.location-link{
+    text-decoration: none;
+    color: beige;
+    text-shadow: 8px 8px 40px black;
+}
+
+.back-bttn{
+    margin-left: 5px;
+    position: absolute;
+    top: 48%;
+    height: 30px;
+    width: 30px;
+    z-index: 3;
+}
+
+
+@media screen and (min-width: 481px) {
+    .site-name {
+        left: 0;
+    }
+
+    .catchphrase {
+        font-weight: bold;
+        max-width: 90vw;
+    }
+
+    .homepage-movie-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .homepage-movie-cards p {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .catchphrase {
+        margin-top: 0;
+        font-size: 4em;
+        max-width: 60vw;
+    }
+
+    .homepage-movie-cards p {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1280px) {
+
+}
+
+.card {
+    margin: 100px auto 0;
+    width: 400px;
+    height: 600px;
+    perspective: 1000px;
+}
+
+.card__inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.card__inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 15px 3px rgba(0, 0, 0);
+}
+
+.card__face--front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 3px 15px 3px rgba(0, 0, 0);
+}
+
+.card__face--back {
+    transform: rotateY(180deg);
+    box-shadow: 0px 3px 15px 3px rgba(0, 0, 0);
+}
+
+.card__content {
+    width: 100%;
+    height: 100%;
+}
+
+.card__header {
+    position: relative;
+    padding: 30px 30px 40px;
+}
+
+.card__header:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 0 0 50% 0;
+}
+
+a:hover {
+    opacity : 0.7;
+}
